@@ -8,7 +8,6 @@
   "main": "dist/globe.gl.mjs",
   "module": "dist/globe.gl.mjs",
   "types": "dist/globe.gl.d.ts",
-  },
   "sideEffects": [
     "./src/*.css"
   ],
