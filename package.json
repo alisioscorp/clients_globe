@@ -5,9 +5,7 @@
   "type": "module",
   "unpkg": "dist/globe.gl.min.js",
   "jsdelivr": "dist/globe.gl.min.js",
-   "scripts": {
-            "start": "node dist/globe.gl.mjs"
-          }, 
+  "main": "dist/globe.gl.mjs",
   "module": "dist/globe.gl.mjs",
   "types": "dist/globe.gl.d.ts",
   "exports": {
