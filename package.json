@@ -5,11 +5,14 @@
   "type": "module",
   "unpkg": "dist/globe.gl.min.js",
   "jsdelivr": "dist/globe.gl.min.js",
-  "scripts": {
-            "start": "node dist/globe.gl.mjs"
-          },
+  "main": "dist/globe.gl.mjs",
   "module": "dist/globe.gl.mjs",
   "types": "dist/globe.gl.d.ts",
+  "exports": {
+    "types": "./dist/globe.gl.d.ts",
+    "umd": "./dist/globe.gl.min.js",
+    "default": "./dist/globe.gl.mjs"
+  },
   "sideEffects": [
     "./src/*.css"
   ],
