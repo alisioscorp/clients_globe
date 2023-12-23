@@ -8,10 +8,6 @@
   "main": "dist/globe.gl.mjs",
   "module": "dist/globe.gl.mjs",
   "types": "dist/globe.gl.d.ts",
-  "exports": {
-    "types": "./dist/globe.gl.d.ts",
-    "umd": "./dist/globe.gl.min.js",
-    "default": "./dist/globe.gl.mjs"
   },
   "sideEffects": [
     "./src/*.css"
