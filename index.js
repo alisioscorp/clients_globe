@@ -1,4 +1,3 @@
-import './src/globe.css';
-import * as THREE from 'three'
+import './globe.css';
 
 export { default } from './globe';

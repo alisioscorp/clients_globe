@@ -50,8 +50,11 @@
   "dependencies": {
     "@tweenjs/tween.js": "18 - 21",
     "accessor-fn": "1",
+    "d3-dsv": "^3.0.1",
+    "globe.gl": "^2.32.1",
+    "index-array-by": "^1.4.1",
     "kapsule": "1",
-    "three": ">=0.118 <1",
+    "three": "^0.157.0",
     "three-globe": "^2.30",
     "three-render-objects": "^1.29"
   },
@@ -67,7 +70,8 @@
     "rollup": "^4.1.4",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-postcss": "^4.0.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^5.0.10"
   },
   "engines": {
     "node": ">=12"
