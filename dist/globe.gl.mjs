@@ -166,14 +166,6 @@ function linkKapsule (kapsulePropName, kapsuleType) {
 }
 
 var _excluded = ["rendererConfig", "waitForGlobeReady"];
-var THREE = _objectSpread2(_objectSpread2({}, window.THREE ? window.THREE // Prefer consumption from global THREE, if exists
-: {
-  AmbientLight: AmbientLight,
-  DirectionalLight: DirectionalLight,
-  Vector2: Vector2
-}), {}, {
-  CSS2DRenderer: CSS2DRenderer
-});
 
 //
 
