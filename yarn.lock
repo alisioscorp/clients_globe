@@ -2629,19 +2629,6 @@ terser@^5.17.4, terser@^5.4.0:
     commander "^2.20.0"
     source-map-support "~0.5.20"
 
-three-conic-polygon-geometry@1:
-  version "1.6.1"
-  resolved "https://registry.npmjs.org/three-conic-polygon-geometry/-/three-conic-polygon-geometry-1.6.1.tgz"
-  integrity sha512-nycXmeeKBiSKWsae/77Z4IjOWnRKuIphFVtJT1Y6yqO0gSwtVVnNcdkMh8wMVlV26zafU4aazHkOSZVPWfpbGA==
-  dependencies:
-    "@turf/boolean-point-in-polygon" "^6.5"
-    d3-array "1 - 3"
-    d3-geo "1 - 3"
-    d3-geo-voronoi "^2.0"
-    d3-scale "1 - 4"
-    delaunator "5"
-    earcut "2"
-
 three-fatline@^0.6:
   version "0.6.1"
   resolved "https://registry.npmjs.org/three-fatline/-/three-fatline-0.6.1.tgz"
