@@ -1,6 +1,12 @@
 import { AmbientLight, DirectionalLight, Vector2 } from 'three';
 import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
 
+if (typeof window !== 'undefined') {
+  console.log('You are on the browser,You are good to go')
+  } else {
+  console.log('You are on the server,Cannot execute')
+ }
+
 const THREE = {
   ...(window.THREE
       ? window.THREE // Prefer consumption from global THREE, if exists
