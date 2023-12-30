@@ -1,29 +1,33 @@
 {
-  "name": "three-globe",
-  "version": "2.30.0",
-  "description": "Globe data visualization as a ThreeJS reusable 3D object",
+  "name": "globe.gl",
+  "version": "2.32.1",
+  "description": "UI component for Globe Data Visualization using ThreeJS/WebGL",
   "type": "module",
-  "unpkg": "dist/three-globe.min.js",
-  "main": "dist/three-globe.mjs",
-  "module": "dist/three-globe.mjs",
-  "types": "dist/three-globe.d.ts",
+  "unpkg": "dist/globe.gl.min.js",
+  "jsdelivr": "dist/globe.gl.min.js",
+  "main": "dist/globe.gl.mjs",
+  "module": "dist/globe.gl.mjs",
+  "types": "dist/globe.gl.d.ts",
   "exports": {
-    "types": "./dist/three-globe.d.ts",
-    "umd": "./dist/three-globe.min.js",
-    "default": "./dist/three-globe.mjs"
+    "types": "./dist/globe.gl.d.ts",
+    "umd": "./dist/globe.gl.min.js",
+    "default": "./dist/globe.gl.mjs"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "./src/*.css"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vasturiano/three-globe.git"
+    "url": "git+https://github.com/vasturiano/globe.gl.git"
   },
-  "homepage": "https://github.com/vasturiano/three-globe",
   "keywords": [
-    "3d",
-    "globe",
     "webgl",
-    "visualization",
-    "three"
+    "three",
+    "globe",
+    "geo",
+    "spherical",
+    "projection",
+    "orthographic"
   ],
   "author": {
     "name": "Vasco Asturiano",
@@ -31,8 +35,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vasturiano/three-globe/issues"
+    "url": "https://github.com/vasturiano/globe.gl/issues"
   },
+  "homepage": "https://github.com/vasturiano/globe.gl",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "dev": "rollup -w -c rollup.config.dev.js",
@@ -45,41 +50,28 @@
   "dependencies": {
     "@tweenjs/tween.js": "18 - 21",
     "accessor-fn": "1",
-    "d3-array": "3",
-    "d3-color": "3",
-    "d3-geo": "3",
-    "d3-interpolate": "3",
-    "d3-scale": "4",
-    "d3-scale-chromatic": "3",
-    "data-joint": "1",
-    "earcut": "2",
-    "frame-ticker": "1",
-    "h3-js": "4",
-    "index-array-by": "1",
+    "d3-dsv": "^3.0.1",
+    "globe.gl": "^2.32.1",
+    "index-array-by": "^1.4.1",
     "kapsule": "1",
-    "three-conic-polygon-geometry": "1",
-    "three-fatline": "^0.6",
-    "three-geojson-geometry": "1",
-    "tinycolor2": "1",
-    "yaot": "^1.1"
-  },
-  "peerDependencies": {
-    "three": ">=0.125"
+    "three": "^0.157.0",
+    "three-globe": "^2.30",
+    "three-render-objects": "^1.29"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-json": "^6.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
-    "@types/three": ">=0.125.0",
+    "postcss": "^8.4.31",
     "rimraf": "^5.0.5",
     "rollup": "^4.1.4",
     "rollup-plugin-dts": "^6.1.0",
-    "three": "^0.157.0",
-    "typescript": "^5.2.2"
+    "rollup-plugin-postcss": "^4.0.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.10"
   },
   "engines": {
     "node": ">=12"
