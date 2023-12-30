@@ -1,27 +1,28 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonJs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
-import postCss from 'rollup-plugin-postcss';
+import json from '@rollup/plugin-json';
 import terser from "@rollup/plugin-terser";
 import dts from 'rollup-plugin-dts';
 
 import pkg from './package.json' assert { type: 'json' };
-const { name, homepage, version, dependencies } = pkg;
+const { name, homepage, version, dependencies, peerDependencies } = pkg;
 
 const umdConf = {
   format: 'umd',
-  name: 'Globe',
+  name: 'ThreeGlobe',
+  globals: { three: 'THREE' },
   banner: `// Version ${version} ${name} - ${homepage}`
 };
-
 export default [
   {
+    external: ['three'],
     input: 'src/index.js',
     output: [
       {
         ...umdConf,
         file: `dist/${name}.js`,
-        sourcemap: true
+        sourcemap: true,
       },
       { // minify
         ...umdConf,
@@ -32,10 +33,10 @@ export default [
       }
     ],
     plugins: [
+      json({ compact: true }),
       resolve(),
       commonJs(),
-      postCss(),
-      babel({ exclude: 'node_modules/**', babelHelpers: 'bundled' })
+      babel({ exclude: 'node_modules/**', babelHelpers: "bundled" })
     ]
   },
   { // ES module
@@ -46,10 +47,10 @@ export default [
         file: `dist/${name}.mjs`
       }
     ],
-    external: Object.keys(dependencies),
+    external: [...Object.keys(dependencies), ...Object.keys(peerDependencies)],
     plugins: [
-      postCss(),
-      babel({ babelHelpers: 'bundled' })
+      json({ compact: true }),
+      babel({ babelHelpers: "bundled" })
     ]
   },
   { // expose TS declarations
