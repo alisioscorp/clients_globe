@@ -1,3 +1,9 @@
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 3001;
+
+app.get("/", (req, res) => res.type('html').send(html));
+
 import { AmbientLight, DirectionalLight, Vector2 } from 'three';
 import { CSS2DRenderer } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
 import ThreeGlobe from 'three-globe';
