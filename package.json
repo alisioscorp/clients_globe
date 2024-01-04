@@ -44,7 +44,7 @@
     "start": "node dist/globe.gl.mjs"
   },
   "files": [
-    "dist/**/*",
+    "dist/**/*"
   ],
   "dependencies": {
     "express": "^4.18.2",
